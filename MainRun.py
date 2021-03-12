@@ -139,10 +139,10 @@ def opt3(): #Close Current figure
     print('    Are you sure you want to clear the current figure? y/n\n')
     act = input()
 
-    if act == 'y' or 'Y':
+    if act.lower() == 'y':
         plt.close()
     
-    elif act == 'n' or 'N':
+    elif act.lower() == 'n':
         print('\nNo')
         #continue
 
@@ -211,12 +211,12 @@ def opt6(): #Stop lidar, end SSH connection, end the program
     print('    \nAre you sure you want to end communication to the EV3 and end this program? (y/n)\n')
     act = input()
 
-    if act == 'y' or 'Y':
+    if act.lower() == 'y':
         RunLidar(1, 0) #Runs argument to EV3 that turns off the lidar
         client.close() #End the ssh connection with the EV3
         exit() #End the program
     
-    elif act == 'n' or 'N':
+    elif act.lower() == 'n':
         print('\nNo')
         #continue
 
